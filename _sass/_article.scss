@@ -1,0 +1,344 @@
+:target:before {
+    content: "";
+    display: block;
+    height: 26px; /* fixed header height*/
+    margin: -26px 0 0; /* negative fixed header height */
+}
+
+@include responsive-when-small-or-medium {
+    :target:before {
+        content: "";
+        display: block;
+        height: 88px; /* fixed header height*/
+        margin: -88px 0 0; /* negative fixed header height */
+    }
+}
+
+article {
+    line-height: 1.6em;
+    padding: 60px 60px 60px 90px;
+    z-index: 1;
+    position: relative;
+    max-width: 960px;
+
+    @include responsive-when-small-or-medium {
+        padding: 30px;
+    }
+
+    img {
+        max-width: 100%;
+        margin: 30px 0 0 0;
+    }
+
+    hr {
+        padding: 1em 0 1em 0;
+        border: none;
+    }
+
+    b,
+    strong {
+        font-weight: 500;
+    }
+
+    .warning {
+        color: $clr-red !important;
+    }
+
+    div.warning {
+        margin: 20px 0;
+        font-weight: 600;
+        padding: 1em;
+        color: $clr-php-warning-text;
+        border: 2px solid $clr-php-warning-border;
+        background-color: $clr-php-warning-background;
+        border-radius: 5px;
+    }
+
+    div.info {
+        margin: 20px 0;
+        font-weight: 600;
+        padding: 1em;
+        color: $clr-php-info-text;
+        background-color: $clr-php-info-background;
+        border-radius: 5px;
+        box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+    }
+
+    p,
+    li,
+    h2,
+    h3,
+    h4,
+    h5 {
+        max-width: 720px;
+    }
+
+    .source {
+        @include responsive-when-small-or-medium {
+            display: none;
+        }
+        font-size: 1em;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        padding: 0;
+        display: inline-block;
+
+        img {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            vertical-align: top;
+            height: 20px;
+            margin-right: 4px;
+        }
+    }
+
+    .shield img {
+        margin: 0;
+        top: 5px;
+        position: relative;
+        max-width: 100%;
+        margin-right: 2px;
+        border-radius: 3px;
+    }
+
+    h1 {
+        line-height: 100%;
+
+        &:first-child {
+            border-top: 5px solid $clr-border;
+            padding-top: 0.5em;
+            margin-top: -1em;
+            font-size: 2.4em;
+
+            @include responsive-when-small-or-medium {
+                padding-top: 0;
+                font-size: 2.4em;
+                border-top: none;
+                margin-top: 0;
+                font-size: 2em;
+            }
+        }
+    }
+
+    h2 {
+        border-top: 2px solid $clr-border;
+        padding-top: 1em;
+        width: 100%;
+    }
+
+    h5 {
+        margin-bottom: 0px;
+    }
+
+    figure {
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $clr-php-blue-dark;
+        font-weight: bold;
+        white-space: nowrap;
+
+        transition: color 0.1s ease-out;
+
+        &:hover {
+            color: $clr-php-blue;
+        }
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    pre {
+        margin: 2em 0 2em 0;
+    }
+
+    p > code,
+    li > code {
+        display: inline-block;
+        padding: 0px 4px;
+        margin: 0 2px;
+        color: $clr-blue-grey-800;
+        background-color: $clr-grey-50;
+        border-radius: 3px;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    blockquote {
+        margin: 1em 0 2em 0;
+        display: inline-block;
+        padding: 1em;
+        background-color: $clr-grey-50;
+        border-radius: 3px;
+
+        p {
+            padding: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .rules {
+        border: none;
+
+        tr {
+            border-bottom: none;
+            td.name,
+            td.desc {
+                border-bottom: none;
+            }
+
+            a {
+                font-size: 0.9em;
+            }
+
+            .name {
+                margin-bottom: 0;
+                color: $clr-indigo;
+                font-family: $font-mono;
+                font-size: 0.9em;
+                font-weight: 500;
+                margin-bottom: 0;
+                padding: 5px;
+                padding-right: 10px;
+            }
+
+            .desc {
+                font-size: 0.9em;
+                margin-bottom: 0;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.benchmark-table {
+    tr {
+        &:nth-child(even) {
+        }
+        &:nth-child(odd) {
+            color: $clr-php-blue-dark;
+        }
+    }
+}
+
+.method-info {
+    background-color: white;
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    border-radius: 3px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        li {
+            margin: 0;
+            list-style: none;
+        }
+    }
+
+    .method-info-header {
+        font-size: 0.9em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        background-color: $clr-grey-50;
+        font-family: $font-mono !important;
+        padding: 10px;
+        border-top: 1px solid $clr-border;
+        border-right: 1px solid $clr-border;
+        box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    .method-info-body {
+        padding: 20px;
+        border-left: 1px solid $clr-border;
+
+        strong {
+            font-weight: 600;
+            color: $clr-php-black;
+        }
+    }
+
+    .method-info-name {
+        font-family: $font-mono !important;
+        color: $clr-php-black;
+        font-size: 1em;
+        padding-right: 2px;
+        > strong {
+            font-weight: 600;
+        }
+    }
+
+    .method-info-param-type {
+        color: $clr-php-green;
+    }
+
+    .method-info-param-name {
+        color: $syntax-var;
+    }
+
+    .method-info-param-default {
+        color: #936;
+    }
+
+    .method-info-punc {
+        color: $syntax-punc;
+    }
+
+    .method-info-return {
+        .method-info-return-type {
+            color: $clr-php-green;
+            vertical-align: top;
+        }
+    }
+
+    .method-info-indent {
+        padding-left: 64px;
+    }
+
+    .method-info-return-text,
+    .method-info-throws-text {
+        max-width: 540px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .method-info-return-lead,
+    .method-info-throws-lead {
+        float: left;
+        font-weight: 600;
+        color: $clr-php-blue;
+    }
+
+
+    .method-info-throws ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .method-info-throws {
+        margin-top: 1em;
+    }
+
+    .method-info-body-desc {
+        margin-bottom: 1em;
+    }
+
+    .method-info-body-params {
+        display: none;
+    }
+}

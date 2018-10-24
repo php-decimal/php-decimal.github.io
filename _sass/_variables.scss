@@ -1,0 +1,41 @@
+$menu-width: 380px;
+$header-height: 72px;
+$header-height-small: 64px;
+
+$clr-border: $clr-grey-100;
+
+$clr-php-black:         #333333;
+$clr-php-heading:       #793862;
+$clr-php-blue-dark:     #4F5B93;
+$clr-php-blue:          #8892BF;
+$clr-php-green:         #693;
+
+$clr-heading-1: $clr-php-heading;
+$clr-heading-2: $clr-php-heading;
+$clr-heading-3: $clr-blue-grey-400;
+$clr-heading-4: $clr-php-black;
+$clr-heading-5: $clr-blue-grey-400;
+
+$clr-menu-heading-1: $clr-php-black;
+$clr-menu-heading-2: $clr-php-heading;
+$clr-menu-heading-3: $clr-blue-grey-600;
+$clr-menu-heading-4: $clr-blue-grey-200;
+
+$clr-php-warning-background: #F4DFDF;
+$clr-php-warning-border:     #EABFBF;
+$clr-php-warning-text: $clr-php-heading;
+
+$clr-php-info-background: $clr-grey-50;
+$clr-php-info-border:     $clr-php-blue;
+$clr-php-info-text:       $clr-php-blue-dark;
+
+$syntax-var: $clr-php-blue-dark;
+$syntax-string: $clr-red;
+$syntax-keyword: $clr-black;
+$syntax-literal: $clr-red;
+$syntax-function: $clr-php-blue-dark;
+$syntax-name: $clr-blue-grey-600;
+$syntax-punc: $clr-blue-grey-600;
+$syntax-class: $clr-indigo;
+$syntax-operator: $clr-black;
+$syntax-comment: $clr-blue-grey-400;

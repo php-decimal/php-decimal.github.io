@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+}
+
+p,
+a,
+li,
+div,
+ul,
+body {
+  font-family: $font-sans;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+pre,
+code {
+  font-family: $font-mono;
+  -webkit-font-smoothing: initial;
+}
+
+html {
+  font-size: 1em;
+  background-color: $clr-white;
+
+  @include responsive-when-small {
+    overflow-x: hidden;
+  }
+}
+
+table {
+  margin-bottom: 1em;
+  min-width: 100%;
+  border-collapse: collapse;
+  border-left: 1px solid $clr-border;
+  border-right: 1px solid $clr-border;
+
+  thead {
+    background-color: $clr-border;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+  }
+
+  th, td {
+    border-bottom: 2px solid $clr-border;
+    padding: 10px;
+    vertical-align: top;
+    font-size: 1em;
+    a, p, span {
+      font-size: 1em;
+    }
+    code {
+      font-size: 0.9em;
+    }
+
+    @include responsive-when-small {
+       font-size: 0.8em;
+        a, p, span, code {
+          font-size: 0.8em;
+        }
+    }
+  }
+
+  th {
+    padding: 5px 10px;
+    color: $clr-heading-1;
+  }
+}
+
+@import "header";
+@import "menu";
+@import "main";
+@import "footer";

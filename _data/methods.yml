@@ -1,0 +1,389 @@
+__construct:
+    name: __construct
+    desc: 'Initializes a new instance using a given value and minimum precision.'
+    return:
+        desc: null
+        type: null
+    params:
+        -
+            type: Decimal|string|int
+            name: value
+        -
+            type: int
+            name: precision
+            default: '28'
+    throws:
+        -
+            type: Exception
+            desc: 'if already constructed.'
+copy:
+    name: copy
+    return:
+        desc: 'a copy of this decimal.'
+        type: Decimal
+    params:
+        -
+            type: int
+            name: precision
+            desc: 'The precision of the return value, which defaults to the precision of this decimal.'
+            default: ""
+add:
+    name: add
+    desc: 'This method is equivalent to the <code>+</code> operator.'
+    return:
+        desc: 'the result of adding this decimal to the given value.'
+        type: Decimal
+    params:
+        -
+            type: Decimal|string|int
+            name: value
+    throws:
+        -
+            type: '<code>TypeError</code>'
+            desc: 'if the value is not a decimal, string or integer.'
+sub:
+    name: sub
+    desc: 'This method is equivalent to the <code>-</code> operator.'
+    return:
+        desc: 'the result of subtracting a given value from this decimal.'
+        type: Decimal
+    params:
+        -
+            type: Decimal|string|int
+            name: value
+    throws:
+        -
+            type: '<code>TypeError</code>'
+            desc: 'if the value is not a decimal, string or integer.'
+mul:
+    name: mul
+    desc: 'This method is equivalent to the <code>*</code> operator.'
+    return:
+        desc: 'the result of multiplying this decimal by the given value.'
+        type: Decimal
+    params:
+        -
+            type: Decimal|string|int
+            name: value
+    throws:
+        -
+            type: '<code>TypeError</code>'
+            desc: 'if the given value is not a decimal, string or integer.'
+div:
+    name: div
+    desc: 'This method is equivalent to the <code>/</code> operator.'
+    return:
+        desc: 'the result of dividing this decimal by the given value.'
+        type: Decimal
+    params:
+        -
+            type: Decimal|string|int
+            name: value
+    throws:
+        -
+            type: '<code>TypeError</code>'
+            desc: 'if the value is not a decimal, string or integer.'
+        -
+            type: '<code>DivisionByZeroError</code>'
+            desc: 'if dividing by zero.'
+        -
+            type: '<code>ArithmeticError</code>'
+            desc: 'if division is undefined, eg. <code>INF</code> / -<code>INF</code>'
+mod:
+    name: mod
+    desc: 'This method is equivalent to the <code>%</code> operator.'
+    return:
+        desc: 'the remainder after dividing the integer value of this decimal by the integer value of the given value.'
+        type: Decimal
+    params:
+        -
+            type: Decimal|string|int
+            name: value
+    throws:
+        -
+            type: '<code>TypeError</code>'
+            desc: 'if the value is not a decimal, string or integer.'
+        -
+            type: '<code>DivisionByZeroError</code>'
+            desc: 'if the integer value of $value is zero.'
+        -
+            type: '<code>ArithmeticError</code>'
+            desc: 'if the operation is undefined, eg. <code>INF</code> % -<code>INF</code>'
+rem:
+    name: rem
+    desc: ''
+    return:
+        desc: 'the remainder after dividing this decimal by a given value.'
+        type: Decimal
+    params:
+        -
+            type: Decimal|string|int
+            name: value
+    throws:
+        -
+            type: '<code>TypeError</code>'
+            desc: 'if the value is not a decimal, string or integer.'
+        -
+            type: '<code>DivisionByZeroError</code>'
+            desc: 'if the integer value of $value is zero.'
+        -
+            type: '<code>ArithmeticError</code>'
+            desc: 'if the operation is undefined, eg. <code>INF</code>, -<code>INF</code>'
+pow:
+    name: pow
+    desc: 'This method is equivalent to the <code>**</code> operator.'
+    return:
+        desc: 'the result of raising this decimal to a given power.'
+        type: Decimal
+    params:
+        -
+            type: Decimal|string|int
+            name: exponent
+            desc: 'The power to raise this decimal to.'
+    throws:
+        -
+            type: '<code>TypeError</code>'
+            desc: 'if the exponent is not a decimal, string or integer.'
+ln:
+    name: ln
+    desc: 'This method is equivalent in function to PHP''s <code>log</code>.'
+    return:
+        desc: 'the natural logarithm of this decimal (log base e), with the same precision as this decimal.'
+        type: Decimal
+exp:
+    name: exp
+    return:
+        desc: 'the exponent of this decimal, ie. e to the power of this, with the same precision as this decimal.'
+        type: Decimal
+log10:
+    name: log10
+    return:
+        desc: 'the base-10 logarithm of this decimal, with the same precision as this decimal.'
+        type: Decimal
+sqrt:
+    name: sqrt
+    return:
+        desc: 'the square root of this decimal, with the same precision as this decimal.'
+        type: Decimal
+floor:
+    name: floor
+    return:
+        desc: 'the closest integer towards negative infinity.'
+        type: Decimal
+ceil:
+    name: ceil
+    return:
+        desc: 'the closest integer towards positive infinity.'
+        type: Decimal
+truncate:
+    name: truncate
+    return:
+        desc: 'the result of discarding all digits behind the decimal point.'
+        type: Decimal
+round:
+    name: round
+    return:
+        desc: 'the value of this decimal with the same precision, rounded according to the specified number of decimal places and rounding mode.'
+        type: Decimal
+    params:
+        -
+            type: int
+            name: places
+            desc: 'The number of places behind the decimal to round to.'
+            default: '0'
+        -
+            type: int
+            name: mode
+            desc: 'The rounding mode, which are constants of Decimal.'
+            default: 'Decimal::ROUND_HALF_EVEN'
+    throws:
+        -
+            type: '<code>InvalidArgumentException</code>'
+            desc: 'if the rounding mode is not supported.'
+shift:
+    name: shift
+    return:
+        desc: 'A copy of this decimal with its decimal place shifted.'
+        type: Decimal
+    params:
+        -
+            type: int
+            name: places
+            desc: 'The number of places to shift the decimal point by. A positive shift moves the decimal point to the right, a negative shift moves the decimal point to the left.'
+precision:
+    name: precision
+    return:
+        desc: 'the precision of this decimal.'
+        type: int
+signum:
+    name: signum
+    return:
+        desc: '<code>0</code> if zero, <code>-1</code> if negative, or <code>1</code> if positive.'
+        type: int
+parity:
+    name: parity
+    return:
+        desc: '<code>0</code> if the integer value of this decimal is even, <code>1</code> if odd. Special numbers like <code>NAN</code> and <code>INF</code> will return <code>1</code>.'
+        type: int
+abs:
+    name: abs
+    return:
+        desc: 'the absolute (positive) value of this decimal.'
+        type: Decimal
+negate:
+    name: negate
+    return:
+        desc: 'the same value as this decimal, but the sign inverted.'
+        type: Decimal
+isEven:
+    name: isEven
+    return:
+        desc: '<code>TRUE</code> if this decimal is an integer and even, <code>FALSE</code> otherwise.'
+        type: bool
+isOdd:
+    name: isOdd
+    return:
+        desc: '<code>TRUE</code> if this decimal is an integer and odd, <code>FALSE</code> otherwise.'
+        type: bool
+isPositive:
+    name: isPositive
+    return:
+        desc: '<code>TRUE</code> if this decimal is positive, <code>FALSE</code> otherwise.'
+        type: bool
+isNegative:
+    name: isNegative
+    return:
+        desc: '<code>TRUE</code> if this decimal is negative, <code>FALSE</code> otherwise.'
+        type: bool
+isNaN:
+    name: isNaN
+    return:
+        desc: '<code>TRUE</code> if this decimal is not a defined number.'
+        type: bool
+isInf:
+    name: isInf
+    return:
+        desc: '<code>TRUE</code> if this decimal represents infinity, <code>FALSE</code> otherwise.'
+        type: bool
+isInteger:
+    name: isInteger
+    return:
+        desc: '<code>TRUE</code> if this decimal is an integer, ie. does not have significant figures behind the decimal point, otherwise <code>FALSE</code>.'
+        type: bool
+isZero:
+    name: isZero
+    return:
+        desc: '<code>TRUE</code> if this decimal is either positive or negative zero.'
+        type: bool
+toFixed:
+    name: toFixed
+    return:
+        desc: 'the value of this decimal formatted to a fixed number of decimal places, with thousands comma-separated, using a given rounding mode.'
+        type: string
+    params:
+        -
+            type: int
+            name: places
+            desc: 'The number of places behind the decimal point.'
+            default: '0'
+        -
+            type: bool
+            name: commas
+            desc: '<code>TRUE</code> if thousands should be separated by a comma.'
+            default: 'false'
+        -
+            type: int
+            name: mode
+            default: 'Decimal::ROUND_HALF_EVEN'
+toInt:
+    name: toInt
+    desc: 'This method is equivalent to a cast to int.'
+    return:
+        desc: 'the integer value of this decimal.'
+        type: int
+    throws:
+        -
+            type: '<code>OverflowException</code>'
+            desc: 'if the value is greater than <code>PHP_INT_MAX</code>.'
+toFloat:
+    name: toFloat
+    desc: 'This method is equivalent to a cast to float, and is not affected by the ''precision'' INI setting.'
+    return:
+        desc: 'the native PHP floating point value of this decimal.'
+        type: float
+    throws:
+        -
+            type: '<code>OverflowException</code>'
+            desc: 'if the value is greater than <code>PHP_FLOAT_MAX</code>.'
+        -
+            type: '<code>UnderflowException</code>'
+            desc: 'if the value is smaller than <code>PHP_FLOAT_MIN</code>.'
+equals:
+    name: equals
+    desc: 'This method is equivalent to the <code>==</code> operator.'
+    return:
+        desc: '<code>TRUE</code> if this decimal is considered equal to the given value.'
+        type: bool
+    params:
+        -
+            type: mixed
+            name: other
+equalsExactly:
+    name: equalsExactly
+    desc: 'This method is <strong class="warning">NOT</strong> equivalent to the <code>===</code> operator.'
+    return:
+        desc: '<code>TRUE</code> if this decimal is equal to <code>$other</code> and has the same precision.'
+        type: bool
+    params:
+        -
+            type: Decimal
+            name: other
+compareTo:
+    name: compareTo
+    desc: 'This method is equivalent to the <code><=></code> operator.'
+    return:
+        desc: '<code> 0</code> if this decimal is considered equal to <code>$other</code>,<br><code>-1</code> if this decimal should be placed before <code>$other</code>,<br><code> 1</code> if this decimal should be placed after <code>$other</code>.'
+        type: int
+        hide: true
+    params:
+        -
+            type: mixed
+            name: other
+toString:
+    name: toString
+    desc: 'This method is equivalent to a cast to string.'
+    return:
+        desc: 'the value of this decimal represented exactly, in either fixed or scientific form, depending on the value.'
+        type: string
+sum:
+    name: sum
+    desc: 'The precision of the result will be the max of all precisions that were encountered during the calculation. The given precision should therefore be considered the minimum precision of the result.  This method is equivalent to adding each value individually.'
+    return:
+        desc: 'the average of all given values.'
+        type: Decimal
+    params:
+        -
+            type: array|Traversable
+            name: values
+        -
+            type: int
+            name: precision
+            desc: 'Minimum precision of the sum.'
+            default: '28'
+    static: true
+avg:
+    name: avg
+    desc: 'The precision of the result will be the max of all precisions that were encountered during the calculation. The given precision should therefore be considered the minimum precision of the result.  This method is equivalent to adding each value individually, then dividing by the number of values.'
+    return:
+        desc: 'the average of all given values.'
+        type: Decimal
+    params:
+        -
+            type: array|Traversable
+            name: values
+        -
+            type: int
+            name: precision
+            desc: 'Minimum precision of the average.'
+            default: '28'
+    static: true

@@ -1,0 +1,196 @@
+Getting Started:
+    -
+        name: 'Introduction'
+        path: '/#introduction'
+        meta: []
+    -
+        name: 'Installation'
+        path: '/#installation'
+        meta: []
+    -
+        name: 'Basic Usage'
+        path: '/#basic-usage'
+    -
+        name: 'Sandbox'
+        path: '/#sandbox'
+    -
+        name: 'Performance'
+        path: '/#performance'
+    -
+        name: 'IDE Support'
+        path: '/#ide-support'
+
+Attributes:
+    -
+        name: 'Precision'
+        path: '/#precision'
+        meta:
+            -
+                name: 'precision<span>(): int</span>'
+                path: '/#precision'
+    -
+        name: 'Special Numbers'
+        path: '/#special-numbers'
+        meta:
+            -
+                name: 'isNaN<span>(): bool</span>'
+                path: '/#isNaN'
+            -
+                name: 'isInf<span>(): bool</span>'
+                path: '/#isInf'
+    -
+        name: 'Integers'
+        path: '/#integers'
+        meta:
+            -
+                name: 'isInteger<span>(): bool</span>'
+                path: '/#isInteger'
+            -
+                name: 'isZero<span>(): bool</span>'
+                path: '/#isZero'
+    -
+        name: 'Sign'
+        path: '/#sign'
+        meta:
+            -
+                name: 'abs<span>(): Decimal</span>'
+                path: '/#abs'
+            -
+                name: 'negate<span>(): Decimal</span>'
+                path: '/#negate'
+            -
+                name: 'signum<span>(): int</span>'
+                path: '/#signum'
+            -
+                name: 'isPositive<span>(): bool</span>'
+                path: '/#isPositive'
+            -
+                name: 'isNegative<span>(): bool</span>'
+                path: '/#isNegative'
+    -
+        name: 'Parity'
+        path: '/#parity'
+        meta:
+            -
+                name: 'parity<span>(): int</span>'
+                path: '/#parity'
+            -
+                name: 'isEven<span>(): bool</span>'
+                path: '/#isEven'
+            -
+                name: 'isOdd<span>(): bool</span>'
+                path: '/#isOdd'
+
+
+Rounding:
+    -
+        name: 'Rounding Modes'
+        path: '/#rounding-modes'
+    -
+        name: 'Methods'
+        path: '/#rounding-methods'
+        meta:
+            -
+                name: 'floor<span>(): Decimal</span>'
+                path: '/#floor'
+            -
+                name: 'ceil<span>(): Decimal</span>'
+                path: '/#ceil'
+            -
+                name: 'truncate<span>(): Decimal</span>'
+                path: '/#truncate'
+            -
+                name: 'round<span>($places, $mode): Decimal</span>'
+                path: '/#round'
+            -
+                name: 'toFixed<span>($places, $commas, $mode): string</span>'
+                path: '/#toFixed'
+
+Comparing:
+    -
+        name: 'Ordering and Equality'
+        path: '/#comparing'
+    -
+        name: 'Methods'
+        path: '/#comparing-methods'
+        meta:
+        -
+            name: 'equals<span>($other): bool</span>'
+            path: '/#equals'
+        -
+            name: 'equalsExactly<span>(Decimal $other): bool</span>'
+            path: '/#equalsExactly'
+        -
+            name: 'compareTo<span>($other): int</span>'
+            path: '/#compareTo'
+
+Converting:
+    -
+        name: 'Casting'
+        path: '/#casting'
+    -
+        name: 'Methods'
+        path: '/#converting-methods'
+        meta:
+            -
+                name: 'toInt<span>(): int</span>'
+                path: '/#toInt'
+            -
+                name: 'toFloat<span>(): float</span>'
+                path: '/#toFloat'
+            -
+                name: 'toString<span>(): string</span>'
+                path: '/#toString'
+
+Arithmetic:
+    -
+        name: 'Methods'
+        path: '/#arithmetic-methods'
+        meta:
+            -
+                name: 'add<span>($value): Decimal</span>'
+                path: '/#add'
+            -
+                name: 'sub<span>($value): Decimal</span>'
+                path: '/#sub'
+            -
+                name: 'mul<span>($value): Decimal</span>'
+                path: '/#mul'
+            -
+                name: 'div<span>($value): Decimal</span>'
+                path: '/#div'
+            -
+                name: 'mod<span>($value): Decimal</span>'
+                path: '/#mod'
+            -
+                name: 'rem<span>($value): Decimal</span>'
+                path: '/#rem'
+            -
+                name: 'pow<span>($value): Decimal</span>'
+                path: '/#pow'
+            -
+                name: 'shift<span>($places): Decimal</span>'
+                path: '/#shift'
+            -
+                name: 'ln<span>(): Decimal</span>'
+                path: '/#ln'
+            -
+                name: 'exp<span>(): Decimal</span>'
+                path: '/#exp'
+            -
+                name: 'log10<span>(): Decimal</span>'
+                path: '/#log10'
+            -
+                name: 'sqrt<span>(): Decimal</span>'
+                path: '/#sqrt'
+    -
+        name: 'Static Methods'
+        path: '/#arithmetic-static'
+        meta:
+            -
+                name: 'sum<span>($values, $precision): Decimal</span>'
+                path: '/#sum'
+            -
+                name: 'avg<span>($values, $precision): Decimal</span>'
+                path: '/#avg'
+

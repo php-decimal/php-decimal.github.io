@@ -1,0 +1,84 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-head;
+  line-height: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1 { + h1, + h2, + h3, + h4, + h5 { margin-top: 0em; }}
+h2 { + h1, + h2, + h3, + h4, + h5 { margin-top: 0em; }}
+h3 { + h1, + h2, + h3, + h4, + h5 { margin-top: 0em; }}
+h4 { + h1, + h2, + h3, + h4, + h5 { margin-top: 0em; }}
+h5 { + h1, + h2, + h3, + h4, + h5 { margin-top: 0em; }}
+
+hr {
+    display: none;
+}
+
+h1 {
+    color: $clr-heading-1;
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+    font-weight: 600;
+    font-size: 2.4em;
+}
+
+h2 {
+    color: $clr-heading-2;
+    margin: 2em 0 1em 0;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+h3 {
+    color: $clr-heading-3;
+    margin: 2em 0 0.5em 0;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+h4 {
+    color: $clr-heading-4;
+    margin: 2em 0 0.75em 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+h5 {
+    color: $clr-heading-5;
+    margin: 1em 0 0.5em 0;
+    font-size: 1.0em;
+}
+
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+
+@include responsive-when-small-or-medium {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.0em;
+  }
+}

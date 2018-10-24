@@ -1,0 +1,4 @@
+name:     "PHP Decimal"
+title:    "Arbitrary-precision decimal arithmetic for PHP 7"
+tagline:  "Arbitrary-precision decimal arithmetic for PHP 7"
+github:   "php-decimal/php-decimal"
