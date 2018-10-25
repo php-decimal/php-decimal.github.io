@@ -11,7 +11,7 @@ Decimal objects can be converted to `string`, `int`, and `float`.
 
 You can also cast a decimal to `string`, `float`, `int` and `bool`.
 
-{% highlight php %}
+```php
 use Decimal\Decimal;
 
 (bool)   new Decimal();      // true, by convention
@@ -19,7 +19,7 @@ use Decimal\Decimal;
 (int)    new Decimal("1.5"); // 1
 (float)  new Decimal("1.5"); // 1.5
 (string) new Decimal("1.5"); // 1.5
-{% endhighlight %}
+```
 
 **Important**: `(string)` or `toString` should not be used to produce a canonical
 representation of a decimal, because there is more than one way to represent the

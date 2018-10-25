@@ -4,7 +4,6 @@ var menu      = $('menu').eq(0);
 var toggle    = $('menu');
 var menuItems = $('menu a');
 
-
 /**
  * Hides the mobile menu.
  */
@@ -89,6 +88,28 @@ var examples = [
                + '$b = new Decimal("7");\n'
                + '\n'
                + 'print_r($a / $b);',
+
+    blankStart + '$decimal = new Decimal("1", 32);\n'
+               + '$decimal = $decimal->div(7)->mul(1000);\n'
+               + '\n'
+               + 'echo $decimal->toFixed(2, $commas = true);',
+
+    blankStart + '$decimal = new Decimal("123456.789");\n'
+               + '\n'
+               + 'echo "$" . $decimal->toFixed(2, $commas = true);',
+
+    blankStart + '/**\n'
+               + ' * @param int $n The factorial to calculate, ie. $n!\n'
+               + ' * @param int $p The precision to calculate the factorial to.\n'
+               + ' *\n'
+               + ' * @return Decimal\n'
+               + ' */\n'
+               + 'function factorial(int $n, int $p = Decimal::DEFAULT_PRECISION): Decimal\n'
+               + '{\n'
+               + '    return $n < 2 ? new Decimal($n, $p) : $n * factorial($n - 1, $p);\n'
+               + '}\n'
+               + '\n'
+               + 'echo factorial(10000, 32);',
 ];
 
 
@@ -106,14 +127,14 @@ function hideResult() {
 
 function evaluate() {
     clearResult();
-    $.post('http://192.241.150.198', {input: sandbox.getValue()}, function(result) {
-        setResult(result);
-    });
+    $.post('http://192.241.150.198', {input: sandbox.getValue()}, setResult)
+     .fail(function() {
+        setResult("An error has occurred - most likely out of memory.");
+     });
 }
 
 function clearEditor() {
     sandbox.setValue("");
-    sandbox.focus();
 }
 
 function resetSandbox() {
@@ -121,7 +142,6 @@ function resetSandbox() {
     clearResult();
     hideResult();
     setAnimatedText(blankStart);
-    sandbox.focus();
 }
 
 function getExample() {
@@ -135,18 +155,26 @@ function setAnimatedText(text, callback) {
     clearEditor();
     clearResult();
     clearTimeout(insertTick);
+    sandbox.setOptions({
+        behavioursEnabled: false,
+        wrapBehavioursEnabled: false,
+    });
 
     var i = 0;
     insertTick = setInterval(function() {
         if (i < text.length) {
-            sandbox.insert(text.charAt(i++));
+            sandbox.session.insert(sandbox.getCursorPosition(), text.charAt(i++))
         } else {
             clearTimeout(insertTick);
+            sandbox.setOptions({
+                behavioursEnabled: false,
+                wrapBehavioursEnabled: false,
+            });
             if (callback) {
                 callback();
             }
         }
-    }, 5);
+    }, 0);
 }
 
 function setExample() {

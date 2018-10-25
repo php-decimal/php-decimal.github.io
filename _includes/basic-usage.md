@@ -4,10 +4,10 @@ The `Decimal` class is under the `Decimal` namespace. This allows for future add
 to the project without affecting the global namespace. Alternatively, you can use the
 [php-decimal/globals]() package which exposes a global `decimal` function as a shortcut to using the constructor.
 
-{% highlight php %}
+```php
 <?php
 use Decimal\Decimal;
-{% endhighlight %}
+```
 `Decimal` objects can be constructed using a `Decimal`, `string`, or `int` value,
 and an optional precision which defaults to **28**.
 
@@ -22,7 +22,7 @@ A warning will be raised if a `string` or `int` argument was not parsed complete
 to a precision of 2 will result in `"0.14"` with a warning. Similarly, `123` with a precision of 2
 would result in `120` with a warning.
 
-{% highlight php %}
+```php
 use Decimal\Decimal;
 
 /**
@@ -35,34 +35,34 @@ $decimal = new Decimal("0.1");
  */
 $decimal = new Decimal("0.1", 36);
 
-{% endhighlight %}
+```
 
 Arithmetic operations will create a new instance using the maximum precision of the operands.
 The result is therefore accurate up to `MAX($a->precision(), $b->precision())` significant places,
 subject to rounding of the last digit.
 
-{% highlight php %}
+```php
 use Decimal\Decimal;
 
 $a = new Decimal("1", 2);
 $b = new Decimal("7", 8);
 
 print_r($a->div($b));
-{% endhighlight %}
+```
 
-{% highlight text %}
+```text
 Decimal\Decimal Object
 (
     [value] => 0.14285714
     [precision] => 8
 )
-{% endhighlight %}
+```
 
 Scalar operands are equivalent to `new Decimal($operand)`, but avoid the need to
 construct an object for the operation. The value is parsed internally and the
 result of the calculation is written to the resulting instance.
 
-{% highlight php %}
+```php
 use Decimal\Decimal;
 
 $a = new Decimal("0.1", 4);
@@ -71,9 +71,9 @@ $c = $a + $b;
 
 print_r($c);
 print_r($c / 3);
-{% endhighlight %}
+```
 
-{% highlight text %}
+```text
 Decimal\Decimal Object
 (
     [value] => 0.3
@@ -84,4 +84,4 @@ Decimal\Decimal Object
     [value] => 0.1
     [precision] => 28
 )
-{% endhighlight %}
+```

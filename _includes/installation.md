@@ -9,42 +9,42 @@ The extension relies on a system install of libmpdec, which can be found [here](
 
 For those of you running Ubuntu:
 
-{% highlight bash %}
+```bash
 sudo apt-get install libmpdec-dev
-{% endhighlight %}
+```
 
 #### Install
 
 The easiest way to install the extension is to use PECL:
 
-{% highlight bash %}
+```bash
 pecl install decimal
-{% endhighlight %}
+```
 
 #### Build
 
 If you would like to build the extension manually, you will need to have build
 tools, a development version of PHP, and libmpdec installed before attempting to build the extension.
 
-{% highlight bash %}
+```bash
 sudo apt-get install build-essential autoconf libmpdec-dev
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```bash
 phpize
 ./configure
 make
 sudo make install
-{% endhighlight %}
+```
 
 #### Enable
 
 Remember to enable to extension in your *.ini* file.
 
-{% highlight bash %}
+```bash
 extension=decimal.so        # Unix, OS X
 extension=php_decimal.dll   # Windows
-{% endhighlight %}
+```
 
 #### Composer
 

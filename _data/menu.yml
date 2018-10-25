@@ -118,9 +118,6 @@ Comparing:
             name: 'equals<span>($other): bool</span>'
             path: '/#equals'
         -
-            name: 'equalsExactly<span>(Decimal $other): bool</span>'
-            path: '/#equalsExactly'
-        -
             name: 'compareTo<span>($other): int</span>'
             path: '/#compareTo'
 
