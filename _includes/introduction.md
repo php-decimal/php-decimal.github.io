@@ -7,10 +7,10 @@ The decimal extension offers several advantages over the `float` data type:
 - Arbitrary precision allows for numbers that are not bound by the same upper and lower limits as `float`. Numbers can be as big or small as required.
 - PHP does a good job of hiding the inaccuracies of binary floating point representation. By default, `0.1 + 0.2` will display as `0.3` even though the internal C `double` can not represent the result accurately. For example:
 
-{% highlight php %}
+```php
 var_dump(0.1 + 0.2);        // float(0.3)
 var_dump(0.1 + 0.2 - 0.3);  // float(5.5511151231258E-17)
-{% endhighlight %}
+```
 
 There are also advantages over [bcmath](http://php.net/manual/en/book.bc.php):
 - Decimal values are objects, so you can typehint `Decimal` instead of `string`.
