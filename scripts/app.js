@@ -106,7 +106,7 @@ function hideResult() {
 
 function evaluate() {
     clearResult();
-    $.post('http://192.241.150.198', {input: sandbox.getValue()}, function(result) {
+    $.post('https://192.241.150.198', {input: sandbox.getValue()}, function(result) {
         setResult(result);
     });
 }
