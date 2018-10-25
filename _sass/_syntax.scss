@@ -33,7 +33,7 @@ pre {
   border: none;
   background-color: $clr-grey-50;
   border-radius: 3px;
-  box-shadow: 1px 1px 0 0 rgba(0,0,0,0.1);
+  border: 2px solid $clr-border;
   line-height: 150%;
   font-weight: 500;
 }
