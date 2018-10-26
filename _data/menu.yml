@@ -16,9 +16,6 @@ Getting Started:
     -
         name: 'Performance'
         path: '/#performance'
-    -
-        name: 'IDE Support'
-        path: '/#ide-support'
 
 Attributes:
     -
@@ -140,6 +137,10 @@ Converting:
                 path: '/#toString'
 
 Arithmetic:
+    -
+        name: 'Operators'
+        path: '/#arithmetic-operators'
+        meta:
     -
         name: 'Methods'
         path: '/#arithmetic-methods'

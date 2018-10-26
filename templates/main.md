@@ -20,7 +20,6 @@ permalink: /
 {% include basic-usage.md %}
 {% include sandbox.md %}
 {% include performance.md %}
-{% include ide-support.md %}
 {% include attributes.md %}
 {% include rounding.md %}
 {% include comparing.md %}

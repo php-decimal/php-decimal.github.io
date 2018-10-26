@@ -1,5 +1,7 @@
 ## Sandbox
 
+This is a limited environment where you can experiment with `Decimal`.
+
 <div id="sandbox-container">
     <div id="sandbox-editor-container">
         <div id="sandbox-editor"><!--

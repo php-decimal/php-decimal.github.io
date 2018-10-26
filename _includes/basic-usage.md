@@ -1,45 +1,24 @@
 ## Basic Usage {#basic-usage}
 
-The `Decimal` class is under the `Decimal` namespace. This allows for future additions
-to the project without affecting the global namespace. Alternatively, you can use the
-[php-decimal/globals]() package which exposes a global `decimal` function as a shortcut to using the constructor.
+The `Decimal` class is under the `Decimal` namespace.
 
-```php
-<?php
-use Decimal\Decimal;
-```
 `Decimal` objects can be constructed using a `Decimal`, `string`, or `int` value,
 and an optional precision which defaults to **28**.
 
 Special `float` values are also supported (`NAN`, `INF` and `-INF`), but `float`
-is otherwise not a valid argument in order to avoid the possibility of accidentially using a `float`.
+is otherwise not a valid argument in order to avoid accidentially using a `float`.
 If you absolutely must use a `float` to construct a decimal you can cast it to a `string` first,
-but doing so relies on the "precision" setting in the *.ini*. This library recommends that projects
-using it avoid `float` entirely, wherever possible. Use `Decimal` instances instead of `float` and use
-a `string` to export the value.
+but doing so if affected by the [precision](http://php.net/manual/en/ini.core.php#ini.precision) INI setting.
 
-A warning will be raised if a `string` or `int` argument was not parsed completely. For example: `"0.135"`
-to a precision of 2 will result in `"0.14"` with a warning. Similarly, `123` with a precision of 2
-would result in `120` with a warning.
+Projects using this extension should avoid `float` entirely, wherever possible. An example workflow is to store values as `DECIMAL` in the database, query them as `string`, parse to `Decimal`, perform calculations, and finally prepare for the database using [toFixed](#toFixed).
 
-```php
-use Decimal\Decimal;
+JSON conversions will automatically convert the decimal to `string` using all signficant figures.
 
-/**
- * Create a decimal with value "0.1" and a precision of 28 significant places.
- */
-$decimal = new Decimal("0.1");
+A warning will be raised if value was not parsed completely. For example, `"0.135"` to a precision of `2` will result in `"0.14"` with a warning. Similarly, `123` with a precision of `2` would result in `120` with a warning because data has been lost.
 
-/**
- * Create a decimal with value "0.1" and a precision of 36 significant places.
- */
-$decimal = new Decimal("0.1", 36);
+`Decimal` is final and immutable. Arithmetic operations always return a new `Decimal` using the maximum precision of the object and the operands. The result is therefore accurate up to `MAX($this->precision(), $op1->precision(), ...)` significant figures, subject to rounding of the last digit.
 
-```
-
-Arithmetic operations will create a new instance using the maximum precision of the operands.
-The result is therefore accurate up to `MAX($a->precision(), $b->precision())` significant places,
-subject to rounding of the last digit.
+For example:
 
 ```php
 use Decimal\Decimal;
@@ -47,10 +26,10 @@ use Decimal\Decimal;
 $a = new Decimal("1", 2);
 $b = new Decimal("7", 8);
 
-print_r($a->div($b));
+print_r($a / $b);
 ```
 
-```text
+```txt
 Decimal\Decimal Object
 (
     [value] => 0.14285714
@@ -58,30 +37,41 @@ Decimal\Decimal Object
 )
 ```
 
-Scalar operands are equivalent to `new Decimal($operand)`, but avoid the need to
-construct an object for the operation. The value is parsed internally and the
-result of the calculation is written to the resulting instance.
+Scalar operands inherit the precision of the `Decimal` operand, which avoids the need to
+construct a new object for the operation. If a scalar operand must be parsed with a higher precision, you should construct a new `Decimal` with an explicit precision. The result of a decimal operation is always a `Decimal`.
+
+For example:
 
 ```php
 use Decimal\Decimal;
 
-$a = new Decimal("0.1", 4);
-$b = new Decimal("0.2", 4);
-$c = $a + $b;
+$op1 = new Decimal("0.1", 4);
+$op2 = "0.123456789";
 
-print_r($c);
-print_r($c / 3);
+print_r($op1 + $op2);
+
+
+use Decimal\Decimal;
+
+/**
+ * @param int $n The factorial to calculate, ie. $n!
+ * @param int $p The precision to calculate the factorial to.
+ *
+ * @return Decimal
+ */
+function factorial(int $n, int $p = Decimal::DEFAULT_PRECISION): Decimal
+{
+    return $n < 2 ? new Decimal($n, $p) : $n * factorial($n - 1, $p);
+}
+
+echo factorial(10000, 32);
 ```
 
-```text
+```
+Warning: Loss of data on string conversion in ... on line 1
 Decimal\Decimal Object
 (
-    [value] => 0.3
+    [value] => 0.2235
     [precision] => 4
-)
-Decimal\Decimal Object
-(
-    [value] => 0.1
-    [precision] => 28
 )
 ```

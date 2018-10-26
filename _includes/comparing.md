@@ -15,3 +15,14 @@ There are two methods that you can use to compare:
 
 {% include method.md method=site.data.methods.equals %}
 {% include method.md method=site.data.methods.compareTo %}
+
+### Operators
+
+{:.comparison-table}
+|-----------------+------------------------------+-------------------------------------------------|
+| Method          |  Operators                   | Description                                     |
+|:----------------|:-----------------------------|:------------------------------------------------|
+| `compareTo`     | `<=>`, `<`, `<=`, `>`, `>=`  | Relative ordering, sorting.                     |
+| `equals`        | `==`                         | Equality, equal precision.                      |
+|                 | `===`                        | Identity, same exact object, even if equal.     |
+|-----------------+------------------------------+-------------------------------------------------+

@@ -1,4 +1,4 @@
 baseurl: ""
-
+highlighter: rogue
 sass:
     sass_dir: _sass

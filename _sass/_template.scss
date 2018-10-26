@@ -1,10 +1,6 @@
 * {
   box-sizing: border-box;
-}
-
-
-
-body {
+  -webkit-font-smoothing: auto;
 }
 
 p,
@@ -15,13 +11,14 @@ ul,
 body {
   font-family: $font-sans;
   font-size: 1em;
-  -webkit-font-smoothing: antialiased;
 }
 
 pre,
 code {
   font-family: $font-mono;
-  -webkit-font-smoothing: initial;
+  font-size: 0.9em;
+  color: $clr-php-black;
+
 }
 
 html {
@@ -34,8 +31,9 @@ html {
 }
 
 table {
+  margin-top: 1em;
   margin-bottom: 1em;
-  min-width: 100%;
+  min-width: 50%;
   border-collapse: collapse;
   border-left: 1px solid $clr-border;
   border-right: 1px solid $clr-border;
@@ -70,6 +68,47 @@ table {
     color: $clr-heading-1;
   }
 }
+
+code,
+pre {
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-wrap: normal;
+  word-spacing: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  -webkit-font-smoothing: true;
+}
+
+code {
+  font-size: 14px;
+  line-height: inherit;
+  font-weight: inherit;
+  font-family: $font-mono;
+  display: inline-block;
+  font-weight: 500;
+}
+
+pre {
+  padding: 1.5em 1.5em;
+  overflow: auto;
+  border: none;
+  background-color: $clr-grey-50;
+  border-radius: 3px;
+  border: 2px solid $clr-border;
+  line-height: 150%;
+  font-weight: 500;
+}
+
 
 @import "header";
 @import "menu";

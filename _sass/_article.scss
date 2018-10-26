@@ -162,25 +162,29 @@ article {
     p > code,
     li > code {
         display: inline-block;
-        padding: 0px 4px;
-        margin: 0 2px;
-        color: $clr-blue-grey-800;
-        background-color: $clr-grey-50;
+        padding: 0 ;
+        margin: 0;
+        margin-left: 0px;
+        left: 0px;
+        position: relative;
+        color: $clr-php-blue-dark;
+        // background-color: $clr-grey-50;
         border-radius: 3px;
         font-size: 0.9em;
         font-weight: 500;
     }
 
     blockquote {
-        margin: 1em 0 2em 0;
+        margin: 1em 0 1em 0;
         display: inline-block;
-        padding: 1em;
-        background-color: $clr-grey-50;
-        border-radius: 3px;
+        padding-left: 1em;
+        border: none;
+        border-left: 4px solid $clr-php-blue-dark;
+        color: $clr-php-blue-dark;
+        font-style: italic;
 
         p {
             padding: 0;
-
             &:last-child {
                 margin-bottom: 0;
             }
@@ -222,6 +226,7 @@ article {
 }
 
 .benchmark-table {
+    width: 100%;
     tr {
         &:nth-child(even) {
         }

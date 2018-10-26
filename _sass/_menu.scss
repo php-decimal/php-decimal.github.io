@@ -160,13 +160,28 @@ menu {
         }
 
         &.active {
-          color: $clr-menu-heading-1;
-          text-indent: 2px;
+          // opacity: 0.8;
+          // color: $clr-menu-heading-1 !important;
+          // text-indent: 4px;
         }
 
         &.current {
-          text-indent: 2px;
-          color: $clr-php-blue-dark;
+          // opacity: 0.8;
+          // color: $clr-menu-heading-1 !important;
+          // text-indent: 4px;
+          position: relative;
+
+          &:before {
+              opacity: 0.2;
+              display: block;
+              content: "->";
+              font-family: $font-mono;
+              font-size: 1em;
+              position: absolute;
+              left: -1.5em;
+              top: 0.6em;
+              line-height: 100%;
+          }
         }
       }
     }

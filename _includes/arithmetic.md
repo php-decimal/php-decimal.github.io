@@ -1,5 +1,7 @@
 ## Arithmetic
 
+### Methods {#arithmetic-methods}
+
 {% include method.md method=site.data.methods.add %}
 {% include method.md method=site.data.methods.sub %}
 {% include method.md method=site.data.methods.mul %}

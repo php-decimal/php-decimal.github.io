@@ -36,8 +36,6 @@ match the behaviour of PHP `float` values wherever possible, and any case that d
 
 {% include method.md method=site.data.methods.isNaN %}
 {% include method.md method=site.data.methods.isInf %}
-{% include method.md method=site.data.methods.isPositive %}
-{% include method.md method=site.data.methods.isNegative %}
 
 
 ### Integers
@@ -49,6 +47,8 @@ match the behaviour of PHP `float` values wherever possible, and any case that d
 {% include method.md method=site.data.methods.abs %}
 {% include method.md method=site.data.methods.negate %}
 {% include method.md method=site.data.methods.signum %}
+{% include method.md method=site.data.methods.isPositive %}
+{% include method.md method=site.data.methods.isNegative %}
 
 
 ### Parity
