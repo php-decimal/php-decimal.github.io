@@ -6,14 +6,14 @@ permalink: /
 {{ site.data.project.title }} {#introduction}
 ============
 
-[![Build Status](https://img.shields.io/travis/{{ site.data.project.travis }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.travis }}){:class="shield"}
-
----
-
 <a class="source" href="https://github.com/{{ site.data.project.github }}">
     <img src="{{ site.baseurl }}/assets/images/github.png">
     {{ site.data.project.github }}
 </a>
+
+---
+
+[![Build Status](https://img.shields.io/travis/{{ site.data.project.travis }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.travis }}){:class="shield"}
 
 {% include introduction.md %}
 {% include installation.md %}
