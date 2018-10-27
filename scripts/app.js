@@ -60,7 +60,7 @@ var sandbox = ace.edit("sandbox-editor", {
     tabSize: 4,
     autoScrollEditorIntoView: false,
     vScrollBarAlwaysVisible: false,
-    fontSize: "13px",
+    fontSize: "14px",
     fontFamily: "Fira Mono",
     wrap: true,
     animatedScroll: false,

@@ -16,7 +16,7 @@
 
 article {
     line-height: 140%;
-    padding: 60px 60px 60px 60px;
+    padding: 60px 30px 60px 60px;
     z-index: 1;
     position: relative;
     max-width: 960px;
@@ -161,15 +161,14 @@ article {
     p > code,
     li > code {
         display: inline-block;
-        padding: 0 ;
+        padding: 0;
         margin: 0;
         margin-left: 0px;
         left: 0px;
         position: relative;
-        color: $clr-php-blue-dark;
-        // background-color: $clr-grey-50;
+        color: $clr-php-black;
         border-radius: 3px;
-        font-size: 0.9em;
+        font-size: 14px;
         font-weight: 500;
     }
 
