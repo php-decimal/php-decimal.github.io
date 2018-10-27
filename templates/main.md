@@ -6,7 +6,7 @@ permalink: /
 {{ site.data.project.title }} {#introduction}
 ============
 
-[![Build Status](https://img.shields.io/travis/{{ site.data.project.github }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.github }}){:class="shield"}
+[![Build Status](https://img.shields.io/travis/{{ site.data.project.travis }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.travis }}){:class="shield"}
 
 ---
 
