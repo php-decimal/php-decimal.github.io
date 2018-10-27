@@ -282,7 +282,7 @@ article {
         font-size: 1em;
         padding-right: 2px;
         > strong {
-            font-weight: 600;
+            font-weight: 500;
         }
     }
 
@@ -306,6 +306,7 @@ article {
         .method-info-return-type {
             color: $clr-php-green;
             vertical-align: top;
+            font-weight: 500;
         }
     }
 
@@ -323,7 +324,7 @@ article {
     .method-info-return-lead,
     .method-info-throws-lead {
         float: left;
-        font-weight: 600;
+        font-weight: 500;
         color: $clr-php-blue;
     }
 
