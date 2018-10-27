@@ -11,8 +11,6 @@ permalink: /
     {{ site.data.project.github }}
 </a>
 
----
-
 [![Build Status](https://img.shields.io/travis/{{ site.data.project.travis }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.travis }}){:class="shield"}
 
 {% include introduction.md %}

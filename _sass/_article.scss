@@ -79,7 +79,7 @@ article {
         }
         font-size: 1em;
         line-height: 20px;
-        margin: 0 0 10px 0;
+        margin: 0 0 0px 0;
         padding: 0;
         display: inline-block;
 
@@ -87,7 +87,7 @@ article {
             margin: 0;
             padding: 0;
             display: inline-block;
-            vertical-align: top;
+            vertical-align: middle;
             height: 20px;
             margin-right: 4px;
         }
@@ -95,8 +95,6 @@ article {
 
     .shield img {
         margin: 0;
-        top: 5px;
-        position: relative;
         max-width: 100%;
         margin-right: 2px;
         border-radius: 3px;
@@ -110,6 +108,7 @@ article {
             padding-top: 0.5em;
             margin-top: -1em;
             font-size: 2.4em;
+            margin-bottom: 0.5em;
 
             @include responsive-when-small-or-medium {
                 padding-top: 0;
