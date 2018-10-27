@@ -100,7 +100,7 @@ Rounding:
                 name: 'round<span>($places, $mode): Decimal</span>'
                 path: '/#round'
             -
-                name: 'toFixed<span>($places, $commas, $mode): string</span>'
+                name: 'toFixed<span>($places): string</span>'
                 path: '/#toFixed'
 
 Comparing:
