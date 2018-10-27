@@ -18,6 +18,8 @@ code {
   font-family: $font-mono;
   font-size: 0.9em;
   color: $clr-php-black;
+  line-height: 150%;
+  font-weight: 500;
 
 }
 
@@ -85,8 +87,6 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-
-  -webkit-font-smoothing: true;
 }
 
 code {
@@ -105,8 +105,7 @@ pre {
   background-color: $clr-grey-50;
   border-radius: 3px;
   border: 2px solid $clr-border;
-  line-height: 150%;
-  font-weight: 500;
+
 }
 
 
