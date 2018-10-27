@@ -139,14 +139,14 @@ article {
 
     a {
         text-decoration: none;
-        color: $clr-php-blue-dark;
-        font-weight: bold;
+        color: $clr-php-blue;
+        font-weight: 500;
         white-space: nowrap;
 
         transition: color 0.1s ease-out;
 
         &:hover {
-            color: $clr-php-blue;
+            color: $clr-php-blue-dark;
         }
     }
 
@@ -169,7 +169,7 @@ article {
         color: $clr-php-black;
         border-radius: 3px;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     blockquote {
