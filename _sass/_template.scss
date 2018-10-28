@@ -1,6 +1,16 @@
 * {
   box-sizing: border-box;
-  -webkit-font-smoothing: true !important;
+  -webkit-font-smoothing: auto !important;
+  font-smooth: auto !important;
+}
+
+html {
+  font-size: 1em;
+  background-color: $clr-white;
+
+  @include responsive-when-small {
+    overflow-x: hidden;
+  }
 }
 
 p,
@@ -11,55 +21,64 @@ ul,
 body {
   font-family: $font-sans;
   font-size: 1em;
-  font-weight: 300;
-}
-
-pre,
-code {
-  font-family: $font-mono;
-  font-size: 14px;
-  color: $clr-php-black;
-  line-height: 150%;
   font-weight: 400;
-
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-wrap: normal;
-  word-spacing: normal;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+  color: #111;
 }
 
-code {
-  display: inline-block;
+p,
+li,
+h2,
+h3,
+h4,
+h5 {
+    max-width: 720px;
 }
 
-pre {
-  padding: 1.5em 1.5em;
-  overflow: auto;
-  border: none;
-  background-color: $clr-grey-50;
-  border-radius: 3px;
-  border: 2px solid $clr-border;
-
+b,
+strong {
+    font-weight: 600;
+    color: #000;
 }
 
+a {
+    text-decoration: none;
+    color: $clr-php-blue-dark;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: color 0.1s ease-out;
 
-html {
-  font-size: 1em;
-  background-color: $clr-white;
+    &:hover {
+        color: $clr-php-blue;
+    }
+}
 
-  @include responsive-when-small {
-    overflow-x: hidden;
-  }
+hr {
+    padding: 1em 0 1em 0;
+    border: none;
+}
+
+figure {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+blockquote {
+    margin: 1em 0 1em 0;
+    display: inline-block;
+    padding-left: 1em;
+    border: none;
+    border-left: 4px solid $clr-php-blue-dark;
+    color: $clr-php-blue-dark;
+    font-style: italic;
+
+    p {
+        padding: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 table {
@@ -82,16 +101,6 @@ table {
     font-size: 1em;
     a, p, span {
       font-size: 1em;
-    }
-    code {
-      font-size: 0.9em;
-    }
-
-    @include responsive-when-small {
-       font-size: 0.8em;
-        a, p, span, code {
-          font-size: 0.8em;
-        }
     }
   }
 

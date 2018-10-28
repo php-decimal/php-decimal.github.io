@@ -2,7 +2,7 @@ main {
   position: relative;
   background: $clr-white;
 
-  padding-top: 0;//$header-height;
+  padding-top: 0;
   padding-left: $menu-width;
 
   @include responsive-when-small-or-medium {

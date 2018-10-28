@@ -6,7 +6,7 @@ It is difficult to determine what to use for the **scale** of *bcmath*, because 
 the number of places behind the decimal point, rather than the **precision**, which is the total
 number of significant places. This benchmark is therefore arbitrary in itself and serves only to provide a rough idea of what to expect.
 
-The code for this basic benchmark can be found [here](https://github.com/php-decimal/benchmarks).
+The code for this basic benchmark can be found [here](https://gist.github.com/rtheunissen/3c19d829774464f481f853e624fe058c).
 
 Results are the total runtime to produce a result across many iterations, in seconds. **Lower is better**.
 

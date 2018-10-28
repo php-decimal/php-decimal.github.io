@@ -30,49 +30,6 @@ article {
         margin: 30px 0 0 0;
     }
 
-    hr {
-        padding: 1em 0 1em 0;
-        border: none;
-    }
-
-    b,
-    strong {
-        font-weight: 500;
-    }
-
-    .warning {
-        color: $clr-red !important;
-    }
-
-    div.warning {
-        margin: 20px 0;
-        font-weight: 600;
-        padding: 1em;
-        color: $clr-php-warning-text;
-        border: 2px solid $clr-php-warning-border;
-        background-color: $clr-php-warning-background;
-        border-radius: 5px;
-    }
-
-    div.info {
-        margin: 20px 0;
-        font-weight: 600;
-        padding: 1em;
-        color: $clr-php-info-text;
-        background-color: $clr-php-info-background;
-        border-radius: 5px;
-        box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
-    }
-
-    p,
-    li,
-    h2,
-    h3,
-    h4,
-    h5 {
-        max-width: 720px;
-    }
-
     .source {
         @include responsive-when-small-or-medium {
             display: none;
@@ -130,26 +87,6 @@ article {
         margin-bottom: 0px;
     }
 
-    figure {
-        -webkit-margin-before: 0em;
-        -webkit-margin-after: 0em;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
-    }
-
-    a {
-        text-decoration: none;
-        color: $clr-php-blue-dark;
-        font-weight: 400;
-        white-space: nowrap;
-
-        transition: color 0.1s ease-out;
-
-        &:hover {
-            color: $clr-php-blue;
-        }
-    }
-
     li {
         margin: 5px 0;
     }
@@ -160,33 +97,11 @@ article {
 
     p > code,
     li > code {
-        display: inline-block;
         padding: 0;
         margin: 0;
         margin-left: 0px;
-        left: 0px;
-        position: relative;
-        color: $clr-php-black;
-        border-radius: 3px;
-        font-size: 14px;
-        font-weight: 400;
-    }
-
-    blockquote {
-        margin: 1em 0 1em 0;
-        display: inline-block;
-        padding-left: 1em;
-        border: none;
-        border-left: 4px solid $clr-php-blue-dark;
-        color: $clr-php-blue-dark;
-        font-style: italic;
-
-        p {
-            padding: 0;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
+        font-weight: 500;
+        color: inherit !important;
     }
 
     .rules {
