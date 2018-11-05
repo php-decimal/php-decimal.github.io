@@ -8,7 +8,7 @@ permalink: /
 
 [![Github](https://img.shields.io/badge/src-php--decimal-lightgrey.svg?style=flat-square&branch=master)](https://github.com/{{ site.data.project.github }}){:class="shield github"}
 [![Build Status](https://img.shields.io/travis/{{ site.data.project.travis }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.travis }}){:class="shield"}
-[![PECL](https://img.shields.io/badge/PECL-1.0.1-blue.svg)](https://pecl.php.net/package/decimal)
+[![PECL](https://img.shields.io/badge/PECL-1.0.1-blue.svg)](https://pecl.php.net/package/decimal){:class="shield"}
 
 {% include introduction.md %}
 {% include installation.md %}
