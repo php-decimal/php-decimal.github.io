@@ -30,25 +30,11 @@ article {
         margin: 30px 0 0 0;
     }
 
-    .source {
+    .shield.github {
         @include responsive-when-small-or-medium {
             display: none;
         }
-        font-size: 1em;
-        line-height: 20px;
-        margin: 0 0 0px 0;
-        padding: 0;
-        display: inline-block;
-
-        img {
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-            vertical-align: middle;
-            height: 20px;
-            margin-right: 4px;
-        }
-    }
+     }
 
     .shield img {
         margin: 0;
