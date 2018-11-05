@@ -6,12 +6,7 @@ permalink: /
 {{ site.data.project.title }} {#introduction}
 ============
 
-<a class="source" href="https://github.com/{{ site.data.project.github }}">
-    <img src="{{ site.baseurl }}/assets/images/github.png">
-</a>
-
 [![Github](https://img.shields.io/badge/src-php--decimal-lightgrey.svg?style=flat-square&branch=master)](https://github.com/{{ site.data.project.github }}){:class="shield github"}
-
 [![Build Status](https://img.shields.io/travis/{{ site.data.project.travis }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.travis }}){:class="shield"}
 
 {% include introduction.md %}
