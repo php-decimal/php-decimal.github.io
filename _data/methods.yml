@@ -212,8 +212,9 @@ shift:
             desc: 'The number of places to shift the decimal point by. A positive shift moves the decimal point to the right, a negative shift moves the decimal point to the left.'
 trim:
     name: trim
+    since: 1.1.0
     return:
-        desc: 'A copy of this decimal without trailing zeroes.'
+        desc: 'a copy of this decimal without trailing zeroes.'
         type: Decimal
 precision:
     name: precision

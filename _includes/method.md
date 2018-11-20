@@ -40,7 +40,7 @@
                 <span class="method-info-return-lead">Returns:&nbsp;</span>
                 <div class="method-info-indent">
                     {% if include.method.return.hide != false %}
-                        <span class="method-info-return-type">{{ include.method.return.type }},&nbsp;</span>
+                        <span class="method-info-return-type">{{ include.method.return.type }},</span>
                     {% endif %}
                     <span class="method-info-return-text">{{ include.method.return.desc }}</span>
                 </div>
@@ -61,6 +61,15 @@
                 </ul>
             </div>
         </div>
+        {%- endif -%}
+
+        {%- if include.method.since -%}
+            <div class="method-info-since">
+                <span class="method-info-since-lead">Since: </span>
+                <div class="method-info-indent">
+                    <p class="method-info-since-text">{{ include.method.since }}</p>
+                </div>
+            </div>
         {%- endif -%}
     </div>
 </div>

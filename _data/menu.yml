@@ -97,6 +97,9 @@ Rounding:
                 name: 'truncate<span>(): Decimal</span>'
                 path: '/#truncate'
             -
+                name: 'trim<span>(): Decimal</span>'
+                path: '/#trim'
+            -
                 name: 'round<span>($places, $mode): Decimal</span>'
                 path: '/#round'
             -

@@ -1,0 +1,122 @@
+
+.method-info {
+    background-color: white;
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    border-radius: 3px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        li {
+            margin: 0;
+            list-style: none;
+        }
+    }
+
+    .method-info-header {
+        font-size: 0.9em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        background-color: $clr-grey-50;
+        font-family: $font-mono !important;
+        padding: 10px;
+        border-top: 1px solid $clr-border;
+        border-right: 1px solid $clr-border;
+        box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    .method-info-body {
+        padding: 20px;
+        border-left: 1px solid $clr-border;
+
+        strong {
+            font-weight: 600;
+            color: $clr-php-black;
+        }
+    }
+
+    .method-info-name {
+        font-family: $font-mono !important;
+        color: $clr-php-black;
+        font-size: 1em;
+        padding-right: 2px;
+        > strong {
+            font-weight: 500;
+        }
+    }
+
+    .method-info-param-type {
+        color: $clr-php-green;
+    }
+
+    .method-info-param-name {
+        color: $syntax-var;
+    }
+
+    .method-info-param-default {
+        color: #936;
+    }
+
+    .method-info-punc {
+        color: $syntax-punc;
+    }
+
+    .method-info-return {
+        .method-info-return-type {
+            font-family: $font-mono !important;
+            font-size: 0.9em;
+            color: $clr-php-green;
+            vertical-align: top;
+            font-weight: 500;
+            margin-right: 2px;
+        }
+    }
+
+    .method-info-indent {
+        padding-left: 64px;
+    }
+
+    .method-info-return-text,
+    .method-info-since-text,
+    .method-info-throws-text {
+        max-width: 540px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .method-info-return-lead,
+    .method-info-since-lead,
+    .method-info-throws-lead {
+        float: left;
+        font-weight: 500;
+        color: $clr-php-blue;
+    }
+
+    .method-info-since-text {
+        font-family: $font-mono !important;
+        font-size: 0.9em;
+    }
+
+    .method-info-throws ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .method-info-throws {
+        margin-top: 1em;
+    }
+
+    .method-info-body-desc {
+        margin-bottom: 1em;
+    }
+
+    .method-info-body-params {
+        display: none;
+    }
+}
