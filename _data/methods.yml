@@ -210,6 +210,11 @@ shift:
             type: int
             name: places
             desc: 'The number of places to shift the decimal point by. A positive shift moves the decimal point to the right, a negative shift moves the decimal point to the left.'
+trim:
+    name: trim
+    return:
+        desc: 'A copy of this decimal without trailing zeroes.'
+        type: Decimal
 precision:
     name: precision
     return:

@@ -30,4 +30,5 @@ You can also use the corresponding [PHP constants](http://php.net/manual/en/func
 {% include method.md method=site.data.methods.ceil %}
 {% include method.md method=site.data.methods.truncate %}
 {% include method.md method=site.data.methods.round %}
+{% include method.md method=site.data.methods.trim %}
 {% include method.md method=site.data.methods.toFixed %}
