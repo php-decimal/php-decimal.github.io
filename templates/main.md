@@ -7,8 +7,12 @@ permalink: /
 ============
 
 [![Github](https://img.shields.io/badge/src-php--decimal-lightgrey.svg?style=flat-square&branch=master)](https://github.com/{{ site.data.project.github }}){:class="shield github"}
-[![Build Status](https://img.shields.io/travis/{{ site.data.project.travis }}.svg?style=flat-square&branch=master)](https://travis-ci.org/{{ site.data.project.travis }}){:class="shield"}
-[![PECL](https://img.shields.io/badge/PECL-1.0.1-blue.svg)](https://pecl.php.net/package/decimal){:class="shield"}
+
+[![Build Status](https://travis-ci.org/php-decimal/ext-decimal.svg?branch=master&style=flat-square)](https://travis-ci.org/php-decimal/ext-decimal){:class="shield"}
+
+[![Build Status](https://ci.appveyor.com/api/projects/status/lg5nw5tqgpmv1c33?svg=true)](https://ci.appveyor.com/project/rtheunissen/php-decimal){:class="shield"}
+
+[![PECL](https://img.shields.io/badge/PECL-1.1.1-blue.svg)](https://pecl.php.net/package/decimal){:class="shield"}
 
 {% include introduction.md %}
 {% include installation.md %}
