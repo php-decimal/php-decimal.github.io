@@ -12,7 +12,7 @@ The reason for this default is **to prevent biasing the average** upwards or dow
 The default rounding mode can not be changed because it affects how values are reduced to a precision.
 With a fixed internal rounding mode, an input value will always result in the same decimal value for a given precision,
 regardless of the environment. However, some methods allow you to provide a rounding mode, which can be any of the following constants:
-- `Decimal::ROUND_UP` (away from from)
+- `Decimal::ROUND_UP` (away from zero)
 - `Decimal::ROUND_DOWN` (towards zero)
 - `Decimal::ROUND_CEILING` (towards positive infinity)
 - `Decimal::ROUND_FLOOR` (towards negative infinity)
