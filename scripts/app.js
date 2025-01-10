@@ -127,7 +127,7 @@ function hideResult() {
 
 function evaluate() {
     clearResult();
-    $.post('http://192.241.150.198', {input: sandbox.getValue()}, setResult)
+    $.post('https://192.241.150.198', {input: sandbox.getValue()}, setResult)
      .fail(function() {
         setResult("An error has occurred - most likely out of memory.");
      });
